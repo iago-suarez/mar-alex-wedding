@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mar & Alex's Wedding</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf6e3;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #d8b4a0;
+            color: white;
+            padding: 2rem 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin: 0.5rem 0 0;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .content h2 {
+            color: #8b5e34;
+        }
+        .countdown {
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+        footer {
+            background-color: #8b5e34;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mar & Alex's Wedding</h1>
+        <p>Join us for our special day!</p>
+    </header>
+    <div class="content">
+        <h2>Save the Date</h2>
+        <p>We can't wait to celebrate with you! Mark your calendars for:</p>
+        <p><strong>June 15, 2024</strong></p>
+        <div class="countdown">
+            <p><em>Countdown to our big day:</em></p>
+            <div id="countdown"></div>
+        </div>
+        <h2>Location</h2>
+        <p>The wedding will be held at the beautiful <strong>Rosewood Gardens</strong>.</p>
+        <p>123 Wedding Lane, Madrid, Spain</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Mar & Alex</p>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        const weddingDate = new Date('June 15, 2024 00:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = "It's our wedding day!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

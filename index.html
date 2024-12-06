@@ -25,20 +25,12 @@
             margin: 0;
             font-size: 3rem;
         }
-        header p {
-            font-size: 1.5rem;
-            margin: 0.5rem 0 0;
-        }
         .content {
             padding: 2rem;
             flex: 1;
         }
         .content h2 {
             color: #8b5e34;
-        }
-        .countdown {
-            font-size: 2rem;
-            margin: 1rem 0;
         }
         footer {
             background-color: #8b5e34;
@@ -55,45 +47,33 @@
 <body>
     <header>
         <h1>Mar & Alex's Wedding</h1>
-        <p>Join us for our special day!</p>
+        <p>BODA DE MAR Y ALEX</p>
     </header>
     <div class="content">
-        <h2>Save the Date</h2>
-        <p>We can't wait to celebrate with you! Mark your calendars for:</p>
-        <p><strong>June 15, 2024</strong></p>
-        <div class="countdown">
-            <p><em>Countdown to our big day:</em></p>
-            <div id="countdown"></div>
-        </div>
-        <h2>Location</h2>
-        <p>The wedding will be held at the beautiful <strong>Rosewood Gardens</strong>.</p>
-        <p>123 Wedding Lane, Madrid, Spain</p>
+        <h2>Details</h2>
+        <p><strong>Saturday 5th July 2025</strong></p>
+        <p><strong>Sábado 5 de julio 2025</strong></p>
+        <p><strong>Arrival at 5.30pm</strong></p>
+        <p><strong>Llegada a las 17.30 h</strong></p>
+        <p>San Francisco Church, R. de San Francisco, 15704 Santiago de Compostela</p>
+        <p>Iglesia de San Francisco, R. de San Francisco, 15704 Santiago de Compostela</p>
+
+        <h2>Accommodation</h2>
+        <p>There will be rooms available in the hotel where the reception will take place; call to reserve, informing the staff that you will be attending Mar and Alex’s wedding:</p>
+        <p>Podéis alojaros en el hotel donde tendrá lugar el banquete, llamar para reservar y decir que venís a la boda de Mar y Alex:</p>
+        <p><strong>Address/dirección:</strong> Campillo de, Costa de San Francisco, 3, 15705 Santiago de Compostela</p>
+        <p><strong>Phone/teléfono:</strong> 981 58 16 34</p>
+
+        <h2>RSVP</h2>
+        <p>Please RSVP before <strong>28th February 2025</strong></p>
+        <p>Responder antes del <strong>28 de febrero de 2025</strong></p>
+
+        <h2>Contact</h2>
+        <p>Contact us if you have any questions</p>
+        <p>Contáctanos si tienes cualquier duda</p>
     </div>
     <footer>
-        <p>&copy; 2024 Mar & Alex</p>
+        <p>&copy; 2025 Mar & Alex</p>
     </footer>
-
-    <script>
-        // Countdown Timer
-        const weddingDate = new Date('June 15, 2024 00:00:00').getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = weddingDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-            if (distance < 0) {
-                document.getElementById('countdown').innerHTML = "It's our wedding day!";
-            }
-        }
-
-        setInterval(updateCountdown, 1000);
-    </script>
 </body>
 </html>

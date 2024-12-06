@@ -6,43 +6,67 @@
     <title>Mar & Alex's Wedding</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Cormorant Garamond', serif;
             margin: 0;
             padding: 0;
-            background-color: #fdf6e3;
-            color: #333;
+            background-color: #fefbf6;
+            color: #2b2926;
             text-align: center;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
         header {
-            background-color: #d8b4a0;
-            color: white;
-            padding: 2rem 0;
+            background-color: #ffffff;
+            color: #2b2926;
+            padding: 3rem 0;
+            border-bottom: 1px solid #eaeaea;
         }
         header h1 {
             margin: 0;
-            font-size: 3rem;
+            font-size: 3.5rem;
+            font-weight: 400;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin: 0.5rem 0 0;
+            color: #7c7c7c;
         }
         .content {
             padding: 2rem;
             flex: 1;
         }
         .content h2 {
-            color: #8b5e34;
+            font-size: 2rem;
+            color: #2b2926;
+            margin-bottom: 1rem;
+        }
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #555;
         }
         footer {
-            background-color: #8b5e34;
-            color: white;
+            background-color: #f7f7f7;
+            color: #7c7c7c;
             padding: 1rem 0;
-            margin-top: 2rem;
+            border-top: 1px solid #eaeaea;
         }
         footer p {
             margin: 0;
             font-size: 1rem;
         }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .content p {
+                font-size: 1rem;
+            }
+        }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
